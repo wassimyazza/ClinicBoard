@@ -29,16 +29,14 @@ function updateNavbar() {
         if(checkAuth()){
             loginBtn.innerText = "Dashboard";
             loginBtn.href = "#dashboard";
+        }else{    
+            loginBtn.innerText = "Login";
+            loginBtn.href = "#auth";
         }
         loginBtn.style.display = 'block';
         
     } else {
         loginBtn.style.display = 'none';
-    }
-    if (currentHash === "#dashboard") {
-        document.getElementsByTagName('ul')[0].innerHTML += '<li id="logout"><a href="#logout">Logout</a></li>';
-    }else{     
-        document.getElementById("logout").style.display = "none";
     }
 }
 window.addEventListener('load',routeAction);

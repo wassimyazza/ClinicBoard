@@ -1,0 +1,74 @@
+[
+  {
+    "id": "PAT001",
+    "fullName": "Marie Dupont",
+    "phone": "+33 1 23 45 67 89",
+    "email": "marie.dupont@email.com",
+    "notes": "Allergic to penicillin. Regular blood pressure monitoring needed.",
+    "createdAt": "2024-11-15T09:00:00.000Z",
+    "updatedAt": "2025-01-10T14:30:00.000Z"
+  },
+  {
+    "id": "PAT002",
+    "fullName": "Jean Martin",
+    "phone": "+33 1 98 76 54 32",
+    "email": "jean.martin@email.com",
+    "notes": "Diabetes type 2. Monthly monitoring required. Takes Metformin 500mg twice daily.",
+    "createdAt": "2024-10-22T14:30:00.000Z",
+    "updatedAt": "2024-12-15T11:20:00.000Z"
+  },
+  {
+    "id": "PAT003",
+    "fullName": "Sophie Bernard",
+    "phone": "+33 1 55 44 33 22",
+    "email": "sophie.bernard@gmail.com",
+    "notes": "Chronic migraines. Avoid bright lights during consultations.",
+    "createdAt": "2024-12-05T16:45:00.000Z",
+    "updatedAt": "2024-12-05T16:45:00.000Z"
+  },
+  {
+    "id": "PAT004",
+    "fullName": "Pierre Dubois",
+    "phone": "+33 1 77 88 99 00",
+    "email": "p.dubois@hotmail.com",
+    "notes": "Hypertension. Family history of heart disease. Non-smoker.",
+    "createdAt": "2024-11-28T10:15:00.000Z",
+    "updatedAt": "2025-01-08T13:45:00.000Z"
+  },
+  {
+    "id": "PAT005",
+    "fullName": "Claire Moreau",
+    "phone": "+33 1 66 55 44 33",
+    "email": "claire.moreau@yahoo.fr",
+    "notes": "Asthma patient. Always carries inhaler. Allergic to dust mites.",
+    "createdAt": "2024-12-12T12:00:00.000Z",
+    "updatedAt": "2024-12-12T12:00:00.000Z"
+  },
+  {
+    "id": "PAT006",
+    "fullName": "Laurent Petit",
+    "phone": "+33 1 11 22 33 44",
+    "email": "laurent.petit@orange.fr",
+    "notes": "Recent surgery on left knee. Physical therapy ongoing.",
+    "createdAt": "2025-01-03T08:30:00.000Z",
+    "updatedAt": "2025-01-15T09:15:00.000Z"
+  },
+  {
+    "id": "PAT007",
+    "fullName": "Emma Leroy",
+    "phone": "+33 1 99 88 77 66",
+    "email": "emma.leroy@free.fr",
+    "notes": "Pregnant, 28 weeks. Regular prenatal checkups scheduled.",
+    "createdAt": "2024-09-20T14:20:00.000Z",
+    "updatedAt": "2025-01-12T10:30:00.000Z"
+  },
+  {
+    "id": "PAT008",
+    "fullName": "Michel Roux",
+    "phone": "+33 1 44 55 66 77",
+    "email": "m.roux@gmail.com",
+    "notes": "Elderly patient, 78 years old. Hearing difficulties, speak loudly.",
+    "createdAt": "2024-10-10T15:45:00.000Z",
+    "updatedAt": "2024-11-25T16:10:00.000Z"
+  }
+]

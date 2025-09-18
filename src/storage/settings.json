@@ -1,0 +1,47 @@
+{
+  "clinicName": "ClinicBoard Healthcare Center",
+  "workingHours": {
+    "start": "08:00",
+    "end": "18:00"
+  },
+  "appointmentSlots": 30,
+  "practitioners": [
+    "Dr. Smith",
+    "Dr. Johnson",
+    "Dr. Brown",
+    "Dr. Wilson",
+    "Dr. Davis"
+  ],
+  "rooms": [
+    "Room 101",
+    "Room 102",
+    "Room 103",
+    "Room 104"
+  ],
+  "appointmentTypes": [
+    "Consultation",
+    "Follow-up",
+    "Emergency",
+    "Checkup",
+    "Specialist Visit",
+    "Vaccination",
+    "Blood Test"
+  ],
+  "expenseCategories": [
+    "supplies",
+    "equipment",
+    "utilities",
+    "staff",
+    "rent",
+    "insurance",
+    "maintenance",
+    "other"
+  ],
+  "paymentMethods": [
+    "cash",
+    "card",
+    "check",
+    "transfer",
+    "insurance"
+  ]
+}

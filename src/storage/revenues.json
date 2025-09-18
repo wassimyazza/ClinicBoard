@@ -1,0 +1,102 @@
+[
+  {
+    "id": "REV001",
+    "amount": 80,
+    "paymentMethod": "cash",
+    "label": "Consultation - Marie Dupont",
+    "patientId": "PAT001",
+    "appointmentId": "APT009",
+    "date": "2025-01-17T09:15:00.000Z",
+    "createdAt": "2025-01-17T09:15:00.000Z"
+  },
+  {
+    "id": "REV002",
+    "amount": 120,
+    "paymentMethod": "card",
+    "label": "Follow-up consultation - Jean Martin",
+    "patientId": "PAT002",
+    "appointmentId": "APT002",
+    "date": "2025-01-18T15:15:00.000Z",
+    "createdAt": "2025-01-18T15:15:00.000Z"
+  },
+  {
+    "id": "REV003",
+    "amount": 75,
+    "paymentMethod": "cash",
+    "label": "Checkup - Pierre Dubois",
+    "patientId": "PAT004",
+    "appointmentId": "APT004",
+    "date": "2025-01-16T12:00:00.000Z",
+    "createdAt": "2025-01-16T12:00:00.000Z"
+  },
+  {
+    "id": "REV004",
+    "amount": 150,
+    "paymentMethod": "transfer",
+    "label": "Emergency consultation - Claire Moreau",
+    "patientId": "PAT005",
+    "appointmentId": "APT005",
+    "date": "2025-01-14T16:30:00.000Z",
+    "createdAt": "2025-01-14T16:30:00.000Z"
+  },
+  {
+    "id": "REV005",
+    "amount": 200,
+    "paymentMethod": "card",
+    "label": "Emergency migraine treatment - Sophie Bernard",
+    "patientId": "PAT003",
+    "appointmentId": "APT010",
+    "date": "2025-01-13T13:30:00.000Z",
+    "createdAt": "2025-01-13T13:30:00.000Z"
+  },
+  {
+    "id": "REV006",
+    "amount": 90,
+    "paymentMethod": "check",
+    "label": "Monthly consultation - Various patients",
+    "patientId": null,
+    "appointmentId": null,
+    "date": "2025-01-12T14:00:00.000Z",
+    "createdAt": "2025-01-12T14:00:00.000Z"
+  },
+  {
+    "id": "REV007",
+    "amount": 85,
+    "paymentMethod": "cash",
+    "label": "Prescription renewal - Multiple patients",
+    "patientId": null,
+    "appointmentId": null,
+    "date": "2025-01-11T10:30:00.000Z",
+    "createdAt": "2025-01-11T10:30:00.000Z"
+  },
+  {
+    "id": "REV008",
+    "amount": 110,
+    "paymentMethod": "card",
+    "label": "Specialist referral consultation",
+    "patientId": null,
+    "appointmentId": null,
+    "date": "2025-01-10T16:45:00.000Z",
+    "createdAt": "2025-01-10T16:45:00.000Z"
+  },
+  {
+    "id": "REV009",
+    "amount": 65,
+    "paymentMethod": "cash",
+    "label": "Blood pressure monitoring session",
+    "patientId": "PAT001",
+    "appointmentId": null,
+    "date": "2025-01-09T11:20:00.000Z",
+    "createdAt": "2025-01-09T11:20:00.000Z"
+  },
+  {
+    "id": "REV010",
+    "amount": 95,
+    "paymentMethod": "transfer",
+    "label": "Diabetes management consultation",
+    "patientId": "PAT002",
+    "appointmentId": null,
+    "date": "2025-01-08T15:30:00.000Z",
+    "createdAt": "2025-01-08T15:30:00.000Z"
+  }
+]

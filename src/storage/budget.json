@@ -1,0 +1,13 @@
+{
+  "monthlyTarget": 8000,
+  "yearlyTarget": 96000,
+  "lastUpdated": "2025-01-01T00:00:00.000Z",
+  "categories": {
+    "supplies": 500,
+    "equipment": 800,
+    "utilities": 600,
+    "staff": 4000,
+    "rent": 1200,
+    "other": 400
+  }
+}
