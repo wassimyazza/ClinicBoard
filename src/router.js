@@ -2,13 +2,15 @@ import { authRander } from "./security/auth.js";
 import { homeRander } from "./modules/home.js";
 import { dashboardRander } from "./modules/dashboard.js";
 import { logout } from "./security/logout.js";
+import { patientsRander } from "./modules/patients.js";
 
 
 const routers = {
     "#auth": authRander,
     "#home": homeRander,
     "#dashboard": dashboardRander,
-    "#logout": logout
+    "#logout": logout,
+    "#patients": patientsRander
 }
 
 function routeAction(){

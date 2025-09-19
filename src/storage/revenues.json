@@ -6,8 +6,8 @@
     "label": "Consultation - Marie Dupont",
     "patientId": "PAT001",
     "appointmentId": "APT009",
-    "date": "2025-01-17T09:15:00.000Z",
-    "createdAt": "2025-01-17T09:15:00.000Z"
+    "date": "2025-09-18T09:15:00.000Z",
+    "createdAt": "2025-09-18T09:15:00.000Z"
   },
   {
     "id": "REV002",
@@ -16,8 +16,8 @@
     "label": "Follow-up consultation - Jean Martin",
     "patientId": "PAT002",
     "appointmentId": "APT002",
-    "date": "2025-01-18T15:15:00.000Z",
-    "createdAt": "2025-01-18T15:15:00.000Z"
+    "date": "2025-09-17T15:15:00.000Z",
+    "createdAt": "2025-09-17T15:15:00.000Z"
   },
   {
     "id": "REV003",
@@ -26,8 +26,8 @@
     "label": "Checkup - Pierre Dubois",
     "patientId": "PAT004",
     "appointmentId": "APT004",
-    "date": "2025-01-16T12:00:00.000Z",
-    "createdAt": "2025-01-16T12:00:00.000Z"
+    "date": "2025-09-16T12:00:00.000Z",
+    "createdAt": "2025-09-16T12:00:00.000Z"
   },
   {
     "id": "REV004",
@@ -36,8 +36,8 @@
     "label": "Emergency consultation - Claire Moreau",
     "patientId": "PAT005",
     "appointmentId": "APT005",
-    "date": "2025-01-14T16:30:00.000Z",
-    "createdAt": "2025-01-14T16:30:00.000Z"
+    "date": "2025-09-15T16:30:00.000Z",
+    "createdAt": "2025-09-15T16:30:00.000Z"
   },
   {
     "id": "REV005",
@@ -46,8 +46,8 @@
     "label": "Emergency migraine treatment - Sophie Bernard",
     "patientId": "PAT003",
     "appointmentId": "APT010",
-    "date": "2025-01-13T13:30:00.000Z",
-    "createdAt": "2025-01-13T13:30:00.000Z"
+    "date": "2025-09-14T13:30:00.000Z",
+    "createdAt": "2025-09-14T13:30:00.000Z"
   },
   {
     "id": "REV006",
@@ -56,8 +56,8 @@
     "label": "Monthly consultation - Various patients",
     "patientId": null,
     "appointmentId": null,
-    "date": "2025-01-12T14:00:00.000Z",
-    "createdAt": "2025-01-12T14:00:00.000Z"
+    "date": "2025-09-13T14:00:00.000Z",
+    "createdAt": "2025-09-13T14:00:00.000Z"
   },
   {
     "id": "REV007",
@@ -66,8 +66,8 @@
     "label": "Prescription renewal - Multiple patients",
     "patientId": null,
     "appointmentId": null,
-    "date": "2025-01-11T10:30:00.000Z",
-    "createdAt": "2025-01-11T10:30:00.000Z"
+    "date": "2025-09-12T10:30:00.000Z",
+    "createdAt": "2025-09-12T10:30:00.000Z"
   },
   {
     "id": "REV008",
@@ -76,8 +76,8 @@
     "label": "Specialist referral consultation",
     "patientId": null,
     "appointmentId": null,
-    "date": "2025-01-10T16:45:00.000Z",
-    "createdAt": "2025-01-10T16:45:00.000Z"
+    "date": "2025-09-11T16:45:00.000Z",
+    "createdAt": "2025-09-11T16:45:00.000Z"
   },
   {
     "id": "REV009",
@@ -86,8 +86,8 @@
     "label": "Blood pressure monitoring session",
     "patientId": "PAT001",
     "appointmentId": null,
-    "date": "2025-01-09T11:20:00.000Z",
-    "createdAt": "2025-01-09T11:20:00.000Z"
+    "date": "2025-08-20T11:20:00.000Z",
+    "createdAt": "2025-08-20T11:20:00.000Z"
   },
   {
     "id": "REV010",
@@ -96,7 +96,107 @@
     "label": "Diabetes management consultation",
     "patientId": "PAT002",
     "appointmentId": null,
-    "date": "2025-01-08T15:30:00.000Z",
-    "createdAt": "2025-01-08T15:30:00.000Z"
+    "date": "2025-08-19T15:30:00.000Z",
+    "createdAt": "2025-08-19T15:30:00.000Z"
+  },
+  {
+    "id": "REV011",
+    "amount": 105,
+    "paymentMethod": "card",
+    "label": "Routine health check - Thomas Leroy",
+    "patientId": "PAT010",
+    "appointmentId": "APT015",
+    "date": "2025-09-09T10:00:00.000Z",
+    "createdAt": "2025-09-09T10:00:00.000Z"
+  },
+  {
+    "id": "REV012",
+    "amount": 85,
+    "paymentMethod": "cash",
+    "label": "Flu vaccination - Emma Fournier",
+    "patientId": "PAT011",
+    "appointmentId": "APT016",
+    "date": "2025-09-07T14:30:00.000Z",
+    "createdAt": "2025-09-07T14:30:00.000Z"
+  },
+  {
+    "id": "REV013",
+    "amount": 140,
+    "paymentMethod": "transfer",
+    "label": "Post-surgery follow-up - Julien Moreau",
+    "patientId": "PAT012",
+    "appointmentId": "APT017",
+    "date": "2025-09-04T11:45:00.000Z",
+    "createdAt": "2025-09-04T11:45:00.000Z"
+  },
+  {
+    "id": "REV014",
+    "amount": 95,
+    "paymentMethod": "check",
+    "label": "General consultation - Group session",
+    "patientId": null,
+    "appointmentId": null,
+    "date": "2025-09-01T15:00:00.000Z",
+    "createdAt": "2025-09-01T15:00:00.000Z"
+  },
+  {
+    "id": "REV015",
+    "amount": 125,
+    "paymentMethod": "card",
+    "label": "Allergy consultation - Laura Simon",
+    "patientId": "PAT013",
+    "appointmentId": "APT018",
+    "date": "2025-08-31T09:30:00.000Z",
+    "createdAt": "2025-08-31T09:30:00.000Z"
+  },
+  {
+    "id": "REV016",
+    "amount": 70,
+    "paymentMethod": "cash",
+    "label": "Blood test review - Antoine Girard",
+    "patientId": "PAT014",
+    "appointmentId": "APT019",
+    "date": "2025-08-28T13:00:00.000Z",
+    "createdAt": "2025-08-28T13:00:00.000Z"
+  },
+  {
+    "id": "REV017",
+    "amount": 110,
+    "paymentMethod": "transfer",
+    "label": "Cardiology consultation - Isabelle Dupont",
+    "patientId": "PAT015",
+    "appointmentId": "APT020",
+    "date": "2025-08-27T10:15:00.000Z",
+    "createdAt": "2025-08-27T10:15:00.000Z"
+  },
+  {
+    "id": "REV018",
+    "amount": 90,
+    "paymentMethod": "card",
+    "label": "Routine follow-up - Various patients",
+    "patientId": null,
+    "appointmentId": null,
+    "date": "2025-08-26T16:20:00.000Z",
+    "createdAt": "2025-08-26T16:20:00.000Z"
+  },
+  {
+    "id": "REV019",
+    "amount": 80,
+    "paymentMethod": "check",
+    "label": "Prescription renewal - Marie Lambert",
+    "patientId": "PAT016",
+    "appointmentId": "APT021",
+    "date": "2025-08-24T11:30:00.000Z",
+    "createdAt": "2025-08-24T11:30:00.000Z"
+  },
+  {
+    "id": "REV020",
+    "amount": 150,
+    "paymentMethod": "card",
+    "label": "Emergency consultation - Victor Hugo",
+    "patientId": "PAT017",
+    "appointmentId": "APT022",
+    "date": "2025-08-23T14:45:00.000Z",
+    "createdAt": "2025-08-23T14:45:00.000Z"
   }
 ]
