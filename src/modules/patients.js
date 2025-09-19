@@ -134,17 +134,35 @@ function setupEvents() {
     searchBox.onkeyup = function() {
         const value = this.value.toLowerCase();
         const patients = JSON.parse(localStorage.getItem('patients')) || [];
-        const filtered = value === '' ? patients : patients.filter(p => 
-            p.fullName.toLowerCase().includes(value) || p.phone.includes(value)
-        );
+        let filtered;
+        if (value === '') {
+            filtered = patients;
+        } else {
+            filtered = [];
+            
+            for (let i = 0; i < patients.length; i++) {
+                let patient = patients[i];
+                
+                if (patient.fullName.toLowerCase().includes(value.toLowerCase()) || patient.phone.includes(value)) {
+                    filtered.push(patient);
+                }
+            }
+        }
+
         displayPatients(filtered);
     };
 
-    document.getElementById('tbody').onclick = (e) => {
-        const id = e.target.dataset.patientId;
-        if (e.target.classList.contains('edit-btn')) editPatient(id);
-        if (e.target.classList.contains('delete-btn')) deletePatient(id);
+    document.getElementById('tbody').onclick = function(e) {
+        var id = e.target.dataset.patientId;
+
+        if (e.target.classList.contains('edit-btn')) {
+            editPatient(id);
+        }
+        if (e.target.classList.contains('delete-btn')) {
+            deletePatient(id);
+        }
     };
+
 }
 
 function addPatient() {
@@ -195,7 +213,12 @@ function updatePatient() {
     
     if (index === -1) return alert('Patient not found!');
 
-    patients[index] = {...patients[index], fullName: name, phone, email, notes, updatedAt: new Date().toISOString()};
+    patients[index].fullName = name;
+    patients[index].phone = phone;
+    patients[index].email = email;
+    patients[index].notes = notes;
+    patients[index].updatedAt = new Date().toISOString();
+
     localStorage.setItem('patients', JSON.stringify(patients));
     displayPatients(patients);
     document.getElementById('edit-popup').style.display = 'none';
@@ -217,22 +240,29 @@ function displayPatients(patients) {
         return;
     }
 
-    tbody.innerHTML = patients.map(p => `
-        <tr>
-            <td>${p.id}</td>
-            <td>${p.fullName}</td>
-            <td>${p.phone}</td>
-            <td>${p.email}</td>
-            <td>${p.notes || '-'}</td>
-            <td>
-                <div class="action-btns">
-                    <button class="edit-btn" data-patient-id="${p.id}">Edit</button>
-                    <button class="delete-btn" data-patient-id="${p.id}">Delete</button>
-                    <button class="history-btn">History</button>
-                </div>
-            </td>
-        </tr>
-    `).join('');
+    let html = '';
+
+    for (let i = 0; i < patients.length; i++) {
+        const p = patients[i];
+        html += `
+            <tr>
+                <td>${p.id}</td>
+                <td>${p.fullName}</td>
+                <td>${p.phone}</td>
+                <td>${p.email}</td>
+                <td>${p.notes || '-'}</td>
+                <td>
+                    <div class="action-btns">
+                        <button class="edit-btn" data-patient-id="${p.id}">Edit</button>
+                        <button class="delete-btn" data-patient-id="${p.id}">Delete</button>
+                        <button class="history-btn">History</button>
+                    </div>
+                </td>
+            </tr>
+        `;
+    }
+
+    tbody.innerHTML = html;
 }
 
 function checkAuth() {
