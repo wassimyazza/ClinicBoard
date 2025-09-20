@@ -1,5 +1,8 @@
-export function patientsRander(){
+export async function patientsRander(){
     const app = document.getElementById("result");
+
+    const patients = await getData('patients');
+    const content = displayPatients(patients);
     app.innerHTML = `<style>
 .patients-page {
     background-color: #f9f9f9;
@@ -203,9 +206,85 @@ export function patientsRander(){
         padding: 10px 8px;
     }
 }
+#add-patient-popup {
+    position: fixed;
+    background: #00000052;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    // display:flex;
+    justify-content: center;
+    align-items:center;
+    z-index:999;
+    display:none;
+}
+#add-patient-popup .patient-form{
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 2px 2px 9px 1px #c0c0c0;
+    border-radius: 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:50px 0px;
+    
+}
+#add-patient-popup .patient-form input,textarea{
+    width: 95%;
+    height:40px;
+    background: #e8e8e8ff;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    box-shadow: 0px 0px 2px 1px #c0c0c0;
+    padding-left:2%;
+}
+#add-patient-popup .patient-form button{
+    width: 95%;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    color:white;
+    height:40px;
+    cursor:pointer;
+}
+#add-patient-popup .patient-form button:first-of-type{
+    background: #27ae60;
+}
+#add-patient-popup .patient-form button:first-of-type:hover{
+    background: #229954;
+}
+#add-patient-popup .patient-form button:last-of-type{
+    background: gray;
+}
+#add-patient-popup .patient-form button:last-of-type:hover{
+    background: gray;
+}
+#add-patient-popup h1{
+    font-size: 2rem;
+    font-weight:bold;
+}
 </style>
 
 <div class="patients-page">
+
+
+        <div id="add-patient-popup">
+            <div class="patient-form">
+                <h1>Add Patient</h1>
+                <input type="text" placeholder="Full Name">
+                <input type="tel" placeholder="phone">
+                <input type="email" placeholder="email">
+                <textarea placeholder="Note"></textarea>
+                <button>Add Patient</button>
+                <button id="close-patient-popup">Cancel</button>
+            </div>
+        </div>
+
     <nav class="nav-menu">
         <ul class="nav-list">
             <li class="nav-item">
@@ -235,6 +314,7 @@ export function patientsRander(){
             <button class="add-btn">Add New Patient</button>
         </div>
 
+
         <div class="search-section">
             <input 
                 type="text" 
@@ -256,79 +336,47 @@ export function patientsRander(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>PAT001</td>
-                        <td>Marie Dupont</td>
-                        <td>+33 1 23 45 67 89</td>
-                        <td>marie.dupont@email.com</td>
-                        <td>Allergic to penicillin. Regular blood pressure monitoring needed.</td>
-                        <td>
-                            <div class="action-btns">
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
-                                <button class="history-btn">History</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>PAT002</td>
-                        <td>Jean Martin</td>
-                        <td>+33 1 98 76 54 32</td>
-                        <td>jean.martin@email.com</td>
-                        <td>Diabetes type 2. Monthly monitoring required.</td>
-                        <td>
-                            <div class="action-btns">
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
-                                <button class="history-btn">History</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>PAT003</td>
-                        <td>Sophie Bernard</td>
-                        <td>+33 1 55 44 33 22</td>
-                        <td>sophie.bernard@gmail.com</td>
-                        <td>Chronic migraines. Avoid bright lights during consultations.</td>
-                        <td>
-                            <div class="action-btns">
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
-                                <button class="history-btn">History</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>PAT004</td>
-                        <td>Pierre Dubois</td>
-                        <td>+33 1 77 88 99 00</td>
-                        <td>p.dubois@hotmail.com</td>
-                        <td>Hypertension. Family history of heart disease.</td>
-                        <td>
-                            <div class="action-btns">
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
-                                <button class="history-btn">History</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>PAT005</td>
-                        <td>Claire Moreau</td>
-                        <td>+33 1 66 55 44 33</td>
-                        <td>claire.moreau@yahoo.fr</td>
-                        <td>Asthma patient. Always carries inhaler.</td>
-                        <td>
-                            <div class="action-btns">
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
-                                <button class="history-btn">History</button>
-                            </div>
-                        </td>
-                    </tr>
+                    `+content+`
                 </tbody>
             </table>
         </div>
     </div>
 </div>`;
+
+    
+function closePopup(){
+
+}
+}
+function displayPatients(data){
+    let contentResult = '';
+    data.forEach(element => {
+        contentResult += `<tr>
+                        <td>${element.id}</td>
+                        <td>${element.fullName}</td>
+                        <td>${element.phone}</td>
+                        <td>${element.email}</td>
+                        <td>${element.notes}</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                                <button class="history-btn">History</button>
+                            </div>
+                        </td>
+                    </tr>`;
+    });
+    return contentResult;
+}
+
+
+async function getData(target) {
+    try{
+        let request = await fetch('src/storage/'+target+'.json');
+        let result = await request.json();
+        return result;
+    }catch(error){
+        console.log(error);
+        return [];
+    }
 }
