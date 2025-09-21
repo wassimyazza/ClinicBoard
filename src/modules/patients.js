@@ -1,5 +1,7 @@
 export async function patientsRander(){
     const app = document.getElementById("result");
+    
+    await loadInitialData();
     const patients = JSON.parse(localStorage.getItem("patients")) || [];
     
     app.innerHTML = `<style>
@@ -360,4 +362,17 @@ function generatePatientId(patients) {
     const newIdNumber = lastIdNumber + 1;
     
     return `PAT${newIdNumber.toString().padStart(3, '0')}`;
+}
+
+async function loadInitialData() {
+    const existingPatients = localStorage.getItem('patients');
+    if (!existingPatients) {
+        try {
+            const response = await fetch('src/storage/patients.json');
+            const data = await response.json();
+            localStorage.setItem('patients', JSON.stringify(data));
+        } catch (error) {
+            localStorage.setItem('patients', JSON.stringify([]));
+        }
+    }
 }

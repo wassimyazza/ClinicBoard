@@ -3,6 +3,8 @@ import { homeRander } from "./modules/home.js";
 import { dashboardRander } from "./modules/dashboard.js";
 import { logout } from "./security/logout.js";
 import { patientsRander } from "./modules/patients.js";
+import { appointmentsRander } from "./modules/appointments.js";
+import { revenueRander } from "./modules/revenue.js";
 
 
 const routers = {
@@ -10,7 +12,9 @@ const routers = {
     "#home": homeRander,
     "#dashboard": dashboardRander,
     "#logout": logout,
-    "#patients": patientsRander
+    "#patients": patientsRander,
+    "#appointments": appointmentsRander,
+    "#revenue": revenueRander
 }
 
 function routeAction(){
