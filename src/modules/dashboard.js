@@ -109,8 +109,7 @@ function loadRecentActivities() {
     const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
     
     const activities = [];
-    
-    // Add patient activities
+
     patients.slice(-5).forEach(patient => {
         activities.push({
             text: `New patient registered: ${patient.fullName}`,
@@ -119,7 +118,6 @@ function loadRecentActivities() {
         });
     });
     
-    // Add revenue activities
     revenues.slice(-3).forEach(revenue => {
         activities.push({
             text: `Payment received: ${revenue.amount}€ (${revenue.description})`,
@@ -128,7 +126,6 @@ function loadRecentActivities() {
         });
     });
     
-    // Add expense activities
     expenses.slice(-3).forEach(expense => {
         activities.push({
             text: `Expense recorded: ${expense.amount}€ (${expense.description})`,
@@ -137,7 +134,6 @@ function loadRecentActivities() {
         });
     });
     
-    // Add appointment activities
     appointments.slice(-3).forEach(appointment => {
         const patients = JSON.parse(localStorage.getItem("patients")) || [];
         const patient = patients.find(p => p.id === appointment.patientId);
@@ -149,7 +145,6 @@ function loadRecentActivities() {
         });
     });
     
-    // Sort by timestamp (newest first) and take top 8
     activities.sort((a, b) => b.timestamp - a.timestamp);
     const recentActivities = activities.slice(0, 8);
     
