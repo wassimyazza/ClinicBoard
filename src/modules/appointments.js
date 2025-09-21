@@ -1,7 +1,8 @@
 export function appointmentsRander(){
-    const app = document.getElementById("result");
-    const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
-    const patients = JSON.parse(localStorage.getItem("patients")) || [];
+    if(checkAuth()){
+        const app = document.getElementById("result");
+        const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+        const patients = JSON.parse(localStorage.getItem("patients")) || [];
     
     app.innerHTML = `<style>
 .appointments-page{background-color:#f9f9f9;min-height:100vh;font-family:Arial,sans-serif}
@@ -182,9 +183,6 @@ export function appointmentsRander(){
             <li class="nav-item">
                 <a href="#expenses" class="nav-link">Expenses</a>
             </li>
-            <li class="nav-item">
-                <a href="#reports" class="nav-link">Reports</a>
-            </li>
         </ul>
     </nav>
 
@@ -227,6 +225,17 @@ export function appointmentsRander(){
 
     displayAppointments(appointments);
     setupEventListeners();
+} else {
+    location.replace("#home");
+}
+}
+
+function checkAuth(){
+    const getAdmin = JSON.parse(localStorage.getItem("admin"));
+    if(getAdmin && getAdmin.auth === "active"){
+        return true;
+    }
+    return false;
 }
 
 function setupEventListeners() {

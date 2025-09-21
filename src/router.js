@@ -5,6 +5,8 @@ import { logout } from "./security/logout.js";
 import { patientsRander } from "./modules/patients.js";
 import { appointmentsRander } from "./modules/appointments.js";
 import { revenueRander } from "./modules/revenue.js";
+import { expensesRander } from "./modules/expenses.js";
+import { reportsRander } from "./modules/reports.js";
 
 
 const routers = {
@@ -14,7 +16,9 @@ const routers = {
     "#logout": logout,
     "#patients": patientsRander,
     "#appointments": appointmentsRander,
-    "#revenue": revenueRander
+    "#revenue": revenueRander,
+    "#expenses": expensesRander,
+    "#reports": reportsRander
 }
 
 function routeAction(){
